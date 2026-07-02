@@ -1,7 +1,7 @@
 :root {
-    --bg-light: #fcf8f2; /* Cream */
-    --bg-dark: #1e1a18; /* Dark Chocolate/Charcoal */
-    --accent: #c45a49; /* Rust */
+    --bg-light: #fcf8f2; 
+    --bg-dark: #1e1a18; 
+    --accent: #c45a49; 
     --text-dark: #2d2a26;
     --text-light: #e6e2dd;
     --font-heading: 'Playfair Display', serif;
@@ -20,7 +20,6 @@ body {
     line-height: 1.6;
 }
 
-/* --- Layout & Typography --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -69,7 +68,7 @@ h3 {
 
 .mt-4 { margin-top: 40px; }
 
-/* --- Navigation --- */
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -115,7 +114,7 @@ nav {
     color: var(--accent);
 }
 
-/* --- About Section --- */
+/* About Section */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -136,7 +135,7 @@ nav {
     border-radius: 4px;
 }
 
-/* --- Skills Section --- */
+/* Skills Section */
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -188,7 +187,7 @@ nav {
     border: none;
 }
 
-/* --- Experience Section --- */
+/* Experience Section */
 .timeline {
     border-left: 2px solid rgba(255,255,255,0.1);
     padding-left: 30px;
@@ -225,65 +224,17 @@ nav {
     margin-bottom: 10px;
 }
 
-.small-tags .tag.border {
-    color: #ccc;
-    border-color: #444;
-}
-
-/* --- Projects Section --- */
+/* Projects & Education Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
 
-.project-card {
-    background-color: #f7f3ed;
-    padding: 40px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #ede8e1;
-}
-
-.project-bg-number {
-    position: absolute;
-    top: -20px;
-    right: 10px;
-    font-family: var(--font-heading);
-    font-size: 10rem;
-    color: rgba(196, 90, 73, 0.05);
-    line-height: 1;
-    z-index: 0;
-}
-
-.project-card > * {
-    position: relative;
-    z-index: 1;
-}
-
-.project-category {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-.project-card h3 {
-    margin-top: 0;
-}
-
-.project-card p {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-/* --- Education Section --- */
 .education-card {
     background-color: #f7f3ed;
     padding: 30px;
     border-top: 4px solid var(--accent);
-    max-width: 500px;
 }
 
 .edu-date {
@@ -293,7 +244,7 @@ nav {
     margin-top: 15px;
 }
 
-/* --- Contact Section --- */
+/* Contact Section */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -310,6 +261,17 @@ nav {
 .contact-links li {
     margin-bottom: 15px;
     font-size: 0.95rem;
+}
+
+/* The style for your clickable links */
+.contact-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
 }
 
 .contact-form {
@@ -365,13 +327,12 @@ form input:focus, form textarea:focus {
     color: #fff;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .about-grid, .skills-grid, .projects-grid, .contact-grid {
         grid-template-columns: 1fr;
     }
     .nav-links {
-        display: none; /* Hide on small screens for now */
+        display: none;
     }
     h2 {
         font-size: 2.5rem;
