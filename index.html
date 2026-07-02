@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Raj | Data Analyst Portfolio</title>
+    <title>Rahul Raj | Data Analyst</title>
+    <!-- Importing Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,62 +22,33 @@
     </nav>
 
     <header class="hero">
-        <p class="status">✦ Available for Opportunities</p>
-        <h1>Rahul<br><em>Raj</em></h1>
-        <p class="tagline">"Turning raw data into predictive insights and actionable business decisions."</p>
-        <p class="bio">
-            B.Tech in Computer Science and Engineering at BIT Mesra. Data Analyst Intern at OZi Technologies specializing in automated data pipelines, SQL-driven BI dashboards, and Machine Learning.
-        </p>
-        <div class="hero-buttons">
-            <a href="#projects" class="btn primary">See My Work</a>
-            <a href="https://github.com/rahulraj0621" class="btn secondary" target="_blank">GitHub</a>
+        <div class="watermark">RR</div>
+        
+        <div class="hero-content">
+            <p class="status">✦ Available for Opportunities — 2026</p>
+            <h1>Rahul<br><em>Raj</em></h1>
+            
+            <div class="quote-wrapper">
+                <p class="tagline">"Turning raw data into predictive insights and actionable business decisions."</p>
+                <span class="circle-accent"></span>
+            </div>
+            
+            <hr class="divider">
+            
+            <p class="bio">
+                B.Tech undergrad at BIT Mesra (Class of 2026) with a passion for data analytics, machine learning, and business intelligence. Data Analyst Intern at OZi Technologies — building automated pipelines and models that drive operations.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">See My Work</a>
+                <a href="https://github.com/rahulraj0621" class="btn secondary" target="_blank">Say Hello</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Rahul Raj">
         </div>
     </header>
 
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <div class="card">
-            <h3>Data Analyst Intern | OZi Technologies</h3>
-            <p class="date">Feb 2026 - Present</p>
-            <ul>
-                <li>Built SQL-driven BI dashboards in Redash, Looker Studio, and Power BI for warehouse operations.</li>
-                <li>Automated address intelligence workflows using Python, Regex, and Pandas to process 55K+ orders.</li>
-                <li>Built a packaging inventory forecasting and reorder alert system using BigQuery ML and SQL.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Data Analyst Intern | Tata Steel</h3>
-            <p class="date">May 2025 - July 2025</p>
-            <ul>
-                <li>Developed interactive Power BI dashboards, improving KPI tracking efficiency by 30%.</li>
-                <li>Cleaned and analyzed datasets using Python and Pandas, boosting data accuracy by 25%.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>Key Projects</h2>
-        <div class="card">
-            <h3>Address Zone Prediction & Data Processing</h3>
-            <p><strong>Tech:</strong> Python, Pandas, Regex</p>
-            <p>Built a custom Python pipeline to parse messy address strings, accurately map 100% of valid locations, and reduce a raw 55,000-row file into a clean, intelligent dataset of targeted orders.</p>
-        </div>
-        <div class="card">
-            <h3>Laptop Price Predictor</h3>
-            <p><strong>Tech:</strong> Python, XGBoost, Scikit-learn, Streamlit</p>
-            <p>Engineered 25+ features to build an ML model with 92% accuracy, reducing RMSE by 18%. Deployed via an interactive Streamlit app for real-time predictions.</p>
-        </div>
-        <div class="card">
-            <h3>Warehouse Operations Dashboard</h3>
-            <p><strong>Tech:</strong> Power BI, DAX, Power Query</p>
-            <p>Architected a professional, interactive dashboard for the Category Team to track logistics SLAs, utilizing custom DAX measures and Power Query to clean string errors and track putaway TAT.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Let's Connect</h2>
-        <p>Email: rahulrajsingh2106@gmail.com</p>
-        <p>LinkedIn / GitHub: @rahulraj0621</p>
-    </section>
 </body>
 </html>
