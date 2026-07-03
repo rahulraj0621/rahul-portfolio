@@ -68,7 +68,7 @@ h3 {
 
 .mt-4 { margin-top: 40px; }
 
-/* Navigation */
+/* --- Navigation --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -114,7 +114,7 @@ nav {
     color: var(--accent);
 }
 
-/* About Section */
+/* --- About Section --- */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -122,7 +122,6 @@ nav {
     align-items: center;
 }
 
-/* Styling for the new About Highlights */
 .about-highlights {
     list-style: none;
     padding: 0;
@@ -152,7 +151,7 @@ nav {
     border-radius: 4px;
 }
 
-/* Skills Section */
+/* --- Skills Section --- */
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -204,7 +203,7 @@ nav {
     border: none;
 }
 
-/* Experience Section */
+/* --- Experience Section --- */
 .timeline {
     border-left: 2px solid rgba(255,255,255,0.1);
     padding-left: 30px;
@@ -241,13 +240,87 @@ nav {
     margin-bottom: 10px;
 }
 
-/* Projects & Education Grid */
+/* --- Projects Section (With Selection Hover Effect) --- */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 40px; 
 }
 
+.project-card {
+    background-color: transparent;
+    padding: 40px;
+    position: relative;
+    border: 1px solid #e0dcd7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* The exact hover effect you asked for */
+.project-card:hover {
+    background-color: #ffffff;
+    border-color: var(--accent);
+    box-shadow: -8px 8px 0px var(--accent);
+    transform: translate(4px, -4px);
+}
+
+.project-bg-number {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: rgba(196, 90, 73, 0.15);
+    line-height: 1;
+    z-index: 0;
+    font-weight: 700;
+}
+
+.project-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.project-category {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    color: var(--text-dark);
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.small-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.small-tags .tag {
+    font-size: 0.65rem;
+    font-weight: 500;
+    padding: 6px 10px;
+    color: #777;
+    border: 1px solid #e0dcd7;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Education Section --- */
 .education-card {
     background-color: #f7f3ed;
     padding: 30px;
@@ -261,7 +334,7 @@ nav {
     margin-top: 15px;
 }
 
-/* Contact Section */
+/* --- Contact Section --- */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -280,7 +353,6 @@ nav {
     font-size: 0.95rem;
 }
 
-/* The style for your clickable links */
 .contact-links a {
     color: #bbb;
     text-decoration: none;
@@ -344,6 +416,7 @@ form input:focus, form textarea:focus {
     color: #fff;
 }
 
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .about-grid, .skills-grid, .projects-grid, .contact-grid {
         grid-template-columns: 1fr;
