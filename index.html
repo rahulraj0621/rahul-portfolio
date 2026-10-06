@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
+
     <!-- NAVIGATION -->
-    <nav>
+    <nav id="navbar">
         <div class="logo">Rahul <em>Raj</em></div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -21,29 +26,75 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content">
+            <p class="hero-subhead">👋 Hi, I'm Rahul Raj</p>
+            <h1 class="hero-title">
+                I turn <em>messy data</em><br>into <span id="typed-text"></span><span class="cursor">|</span>
+            </h1>
+            <p class="hero-desc">Data Analyst · BI Developer · ML Enthusiast<br>BIT Mesra '26 · Currently at OZi Technologies</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-outline">Hire Me</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll down">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section id="stats" class="stats-section dark-bg">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <span class="stat-number" data-target="55000">0</span><span class="stat-suffix">+</span>
+                <p>Orders Processed</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="92">0</span><span class="stat-suffix">%</span>
+                <p>ML Model Accuracy</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="2">0</span><span class="stat-suffix"></span>
+                <p>Internships</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="40">0</span><span class="stat-suffix">%</span>
+                <p>Reporting Time Reduced</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+                <p>GitHub Repositories</p>
+            </div>
+        </div>
+    </section>
+
     <!-- ABOUT SECTION -->
-    <section id="about" class="section light-bg">
+    <section id="about" class="section light-bg reveal">
         <div class="container about-grid">
             <div class="about-text">
                 <p class="subhead">ABOUT ME</p>
                 <h2>Analytical mind,<br><em>data-driven</em> solutions.</h2>
-                
-                <!-- Short Crisp Points -->
                 <ul class="about-highlights">
-                    <li>✦ B.Tech Graduate in Computer Science & Engineering <!--[cite: 1] --></li>
-                    <li>✦ Specializing in BI Dashboards, SQL & Machine Learning <!--[cite: 1] --></li>
+                    <li>✦ B.Tech Graduate in Computer Science &amp; Engineering</li>
+                    <li>✦ Specializing in BI Dashboards, SQL &amp; Machine Learning</li>
+                    <li>✦ Built address intelligence for 55K+ orders at OZi Technologies</li>
                 </ul>
-
                 <p>
-                    I'm a B.Tech graduate in Computer Science and Engineering from Birla Institute of Technology, Mesra <!--[cite: 1] --> who genuinely gets excited about turning messy, unstructured datasets into actionable business intelligence. I love when technical work creates real-world operational impact.
+                    I'm a B.Tech graduate in Computer Science and Engineering from Birla Institute of Technology, Mesra who genuinely gets excited about turning messy, unstructured datasets into actionable business intelligence. I love when technical work creates real-world operational impact.
                 </p>
                 <p>
-                    My internship at OZi Technologies let me do exactly that — building automated data pipelines, using Python and Regex to map delivery zones, and architecting SQL-driven BI dashboards for warehouse operations <!--[cite: 1, 2] -->.
+                    My internship at OZi Technologies let me do exactly that — building automated data pipelines, using Python and Regex to map delivery zones across 55,000 orders, and architecting SQL-driven BI dashboards for warehouse operations.
                 </p>
                 <p>
-                    Outside of data pipelines, I dedicate time to educational volunteer work with the Drishti NGO <!--[cite: 1] -->.
+                    Outside of data pipelines, I dedicate time to educational volunteer work with the Drishti NGO.
                 </p>
             </div>
             <div class="about-image">
@@ -53,66 +104,80 @@
     </section>
 
     <!-- SKILLS SECTION -->
-    <section id="skills" class="section light-bg">
+    <section id="skills" class="section light-bg reveal">
         <div class="container">
             <p class="subhead">TECHNICAL TOOLKIT</p>
-            <h2>Skills &<br><em>Expertise</em></h2>
-            
+            <h2>Skills &amp;<br><em>Expertise</em></h2>
+
             <div class="skills-grid">
                 <!-- Column 1 -->
                 <div class="skills-col">
-                    <h3>Data & Analytics</h3>
+                    <h3>Data &amp; Analytics</h3>
                     <div class="skill-bar-container">
                         <div class="skill-info"><span>Python</span><span>90%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
                     </div>
                     <div class="skill-bar-container">
                         <div class="skill-info"><span>SQL / BigQuery</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
                     </div>
                     <div class="skill-bar-container">
                         <div class="skill-info"><span>Power BI / DAX</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
                     </div>
                     <div class="skill-bar-container">
                         <div class="skill-info"><span>Microsoft Excel</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
                     </div>
 
                     <h3 class="mt-4">Machine Learning</h3>
                     <div class="skill-bar-container">
-                        <div class="skill-info"><span>Pandas / NumPy</span><span>88%</span></div> <!--[cite: 1] -->
-                        <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+                        <div class="skill-info"><span>Pandas / NumPy</span><span>88%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
                     </div>
                     <div class="skill-bar-container">
                         <div class="skill-info"><span>Scikit-learn / XGBoost</span><span>80%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-info"><span>NLP / Text Processing</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
                     </div>
                 </div>
 
                 <!-- Column 2 -->
                 <div class="skills-col">
-                    <h3>Tools & Platforms</h3>
+                    <h3>Tools &amp; Platforms</h3>
                     <div class="skill-bar-container">
                         <div class="skill-info"><span>Redash / Looker Studio</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-info"><span>Tableau</span><span>78%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-info"><span>Google Apps Script</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
                     </div>
                     <div class="skill-bar-container">
                         <div class="skill-info"><span>Git / GitHub</span><span>80%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
                     </div>
 
-                    <h3 class="mt-4">Tags & Core</h3>
+                    <h3 class="mt-4">Tags &amp; Core</h3>
                     <div class="tags-container">
                         <span class="tag dark">PYTHON</span>
                         <span class="tag dark">SQL</span>
-                        <span class="tag dark">HTML</span>
-                        <span class="tag dark">CSS</span>
                         <span class="tag dark">REGEX</span>
-                        <span class="tag">DAX</span>
+                        <span class="tag dark">DAX</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
                         <span class="tag">OOP</span>
                         <span class="tag">FEATURE ENGINEERING</span>
                         <span class="tag">KPI REPORTING</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">BIGQUERY ML</span>
                     </div>
                 </div>
             </div>
@@ -120,32 +185,35 @@
     </section>
 
     <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="section dark-bg">
+    <section id="experience" class="section dark-bg reveal">
         <div class="container">
             <p class="subhead">WORK HISTORY</p>
-            <h2>Experience &<br><em>Internships</em></h2>
+            <h2>Experience &amp;<br><em>Internships</em></h2>
 
             <div class="timeline">
                 <div class="job-card">
+                    <div class="job-dot"></div>
                     <p class="job-date">FEB 2026 — PRESENT</p>
                     <h3>Data Analyst Intern</h3>
-                    <p class="job-company">OZi Technologies - Gurgaon, India <!--[cite: 1] --></p>
+                    <p class="job-company">OZi Technologies — Gurgaon, India</p>
                     <ul class="job-bullets">
-                        <li>Built SQL-driven BI dashboards in Redash, Looker Studio, and Power BI for warehouse operations, refund tracking, short-pick analysis, putaway TAT, and delivery performance monitoring. <!--[cite: 1] --></li>
-                        <li>Designed automated data pipelines by combining order, fulfilment, refund, inventory, PO/GRN, and product datasets to create reliable reporting layers for CX, warehouse, category, and operations teams. <!--[cite: 1] --></li>
-                        <li>Developed ShortPick Refunds tracking logic to identify rider-triggered refunds, classify initiated vs pending cases, and surface order-level audit views. <!--[cite: 1] --></li>
-                        <li>Automated address intelligence workflows using Python, Regex, Pandas, and Google Apps Script to classify delivery zones, recover missing pincodes, process 55K+ orders, and reduce manual mapping effort. <!--[cite: 1] --></li>
-                        <li>Built a packaging inventory forecasting and reorder alert system using BigQuery ML, SQL, Google Apps Script, and Google Sheets to predict 90-day order demand. <!--[cite: 1] --></li>
+                        <li>Built an intelligent <strong>Address Zone Prediction pipeline</strong> using Python, Pandas &amp; Regex — parsing messy address strings with custom rules (sector numbers, landmark keywords like "Cyber City", "Dwarka Expressway") to classify 55,000+ delivery orders into Gurgaon zones with 100% address mapping coverage.</li>
+                        <li>Reduced a raw 55K-row dataset down to a clean, targeted 2,149-row intelligent dataset by engineering 3-condition filters (date, status, store) and dropping 40+ redundant columns.</li>
+                        <li>Built SQL-driven BI dashboards in Redash, Looker Studio, and Power BI for warehouse operations, refund tracking, short-pick analysis, putaway TAT, and delivery performance monitoring.</li>
+                        <li>Designed automated data pipelines combining order, fulfilment, refund, inventory, PO/GRN, and product datasets to create reliable reporting layers for CX, warehouse, category, and operations teams.</li>
+                        <li>Developed ShortPick Refunds tracking logic to identify rider-triggered refunds, classify initiated vs pending cases, and surface order-level audit views.</li>
+                        <li>Built a packaging inventory forecasting and reorder alert system using BigQuery ML, SQL, Google Apps Script, and Google Sheets to predict 90-day order demand.</li>
                     </ul>
                 </div>
 
                 <div class="job-card mt-4">
+                    <div class="job-dot"></div>
                     <p class="job-date">MAY 2025 — JULY 2025</p>
                     <h3>Data Analyst Intern</h3>
-                    <p class="job-company">Tata Steel - Remote <!--[cite: 1] --></p>
+                    <p class="job-company">Tata Steel — Remote</p>
                     <ul class="job-bullets">
-                        <li>Developed interactive Power BI dashboard, improving KPI tracking and reporting efficiency by 30%. <!--[cite: 1] --></li>
-                        <li>Cleaned and analyzed datasets using Python, Pandas, and NumPy, boosting data accuracy by 25% and cutting manual reporting time by 40%. <!--[cite: 1] --></li>
+                        <li>Developed interactive Power BI dashboard, improving KPI tracking and reporting efficiency by 30%.</li>
+                        <li>Cleaned and analyzed datasets using Python, Pandas, and NumPy, boosting data accuracy by 25% and cutting manual reporting time by 40%.</li>
                     </ul>
                 </div>
             </div>
@@ -153,7 +221,7 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="section light-bg">
+    <section id="projects" class="section light-bg reveal">
         <div class="container">
             <p class="subhead">SELECTED WORK</p>
             <h2>Projects I've<br><em>Built</em></h2>
@@ -162,74 +230,142 @@
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-bg-number">01</div>
-                    <p class="project-category">MACHINE LEARNING</p>
-                    <h3>Laptop Price Predictor</h3>
-                    <p>Built an ML model with 92% accuracy, reducing RMSE by 18%. Engineered 25+ features (CPU, GPU, storage) and deployed an interactive Streamlit app for real-time predictions. <!--[cite: 1] --></p>
+                    <p class="project-category">DATA ANALYTICS · OZI TECHNOLOGIES</p>
+                    <h3>Address Zone Prediction &amp; Automation</h3>
+                    <p>Built a custom Python pipeline using Pandas &amp; Regex to parse messy address strings, map 55K+ orders to Gurgaon delivery zones using sector rules &amp; landmark keywords. Reduced dataset from 55,000 → 2,149 targeted rows with 100% address mapping coverage.</p>
                     <div class="tags-container small-tags">
                         <span class="tag">PYTHON</span>
-                        <span class="tag">XGBOOST</span>
-                        <span class="tag">STREAMLIT</span>
+                        <span class="tag">PANDAS</span>
+                        <span class="tag">REGEX</span>
+                        <span class="tag">BIGQUERY</span>
                     </div>
+                    <a href="https://github.com/rahulraj0621/ozi_assignment" target="_blank" class="project-link">View on GitHub →</a>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-bg-number">02</div>
-                    <p class="project-category">DATA ANALYTICS</p>
-                    <h3>Zone Prediction & Automation</h3>
-                    <p>Built a custom Python pipeline using Pandas and Regex to parse messy address strings, accurately mapping locations and reducing raw warehouse files into clean, intelligent datasets. <!--[cite: 2] --></p>
+                    <p class="project-category">MACHINE LEARNING</p>
+                    <h3>Laptop Price Predictor</h3>
+                    <p>Built an ML model with 92% accuracy, reducing RMSE by 18%. Engineered 25+ features (CPU, GPU, storage) and deployed an interactive Streamlit app for real-time predictions.</p>
                     <div class="tags-container small-tags">
                         <span class="tag">PYTHON</span>
-                        <span class="tag">PANDAS</span>
-                        <span class="tag">REGEX</span>
+                        <span class="tag">XGBOOST</span>
+                        <span class="tag">STREAMLIT</span>
                     </div>
+                    <a href="https://github.com/rahulraj0621" target="_blank" class="project-link">View on GitHub →</a>
                 </div>
-                
+
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-bg-number">03</div>
-                    <p class="project-category">BUSINESS INTELLIGENCE</p>
-                    <h3>Warehouse Operations Dashboard</h3>
-                    <p>Designed an interactive dashboard in Redash and Power BI to track logistics SLAs, bottlenecks, and "short-picked" SKUs holding up fulfillment at specific hubs. <!--[cite: 2] --></p>
+                    <p class="project-category">AI · BLOCKCHAIN</p>
+                    <h3>Face-Blockchain Verification Pipeline</h3>
+                    <p>Built a multi-stage pipeline: Face scan → Web search → Blockchain verification. A cutting-edge proof-of-concept combining computer vision and blockchain technology for identity verification.</p>
                     <div class="tags-container small-tags">
-                        <span class="tag">POWER BI</span>
-                        <span class="tag">DAX</span>
-                        <span class="tag">REDASH</span>
+                        <span class="tag">PYTHON</span>
+                        <span class="tag">COMPUTER VISION</span>
+                        <span class="tag">BLOCKCHAIN</span>
                     </div>
+                    <a href="https://github.com/rahulraj0621/face-blockchain-pipeline" target="_blank" class="project-link">View on GitHub →</a>
                 </div>
 
                 <!-- Project 4 -->
                 <div class="project-card">
                     <div class="project-bg-number">04</div>
+                    <p class="project-category">BUSINESS INTELLIGENCE · OZI TECHNOLOGIES</p>
+                    <h3>Warehouse Operations Dashboard</h3>
+                    <p>Designed an interactive dashboard in Redash and Power BI to track logistics SLAs, bottlenecks, and "short-picked" SKUs. Automated data pipelines across 6+ datasets for multi-team reporting.</p>
+                    <div class="tags-container small-tags">
+                        <span class="tag">POWER BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">REDASH</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                    <a href="https://github.com/rahulraj0621" target="_blank" class="project-link">View on GitHub →</a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-bg-number">05</div>
+                    <p class="project-category">NLP · MACHINE LEARNING</p>
+                    <h3>NLP Text Summarization</h3>
+                    <p>Implemented multiple NLP-based text summarization techniques using extractive and abstractive approaches. Demonstrates deep understanding of natural language processing beyond standard data analytics.</p>
+                    <div class="tags-container small-tags">
+                        <span class="tag">PYTHON</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">JUPYTER</span>
+                    </div>
+                    <a href="https://github.com/rahulraj0621/NLP_Text_Summarization" target="_blank" class="project-link">View on GitHub →</a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-bg-number">06</div>
                     <p class="project-category">PREDICTIVE MODELING</p>
                     <h3>Power BI Churn Analysis</h3>
-                    <p>Architected an end-to-end pipeline using SQL Server for data cleansing. Integrated a Random Forest model to forecast churn likelihood for newly onboarded customers. <!--[cite: 1] --></p>
+                    <p>Architected an end-to-end pipeline using SQL Server for data cleansing. Integrated a Random Forest model to forecast churn likelihood for newly onboarded customers.</p>
                     <div class="tags-container small-tags">
                         <span class="tag">SQL</span>
                         <span class="tag">POWER QUERY</span>
                         <span class="tag">SCIKIT-LEARN</span>
                     </div>
+                    <a href="https://github.com/rahulraj0621" target="_blank" class="project-link">View on GitHub →</a>
                 </div>
+
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-bg-number">07</div>
+                    <p class="project-category">DATA ENGINEERING</p>
+                    <h3>Adventure Works Data Pipeline</h3>
+                    <p>Built a complete data engineering project on the Adventure Works dataset — data ingestion, transformation, and loading with structured reporting layers.</p>
+                    <div class="tags-container small-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">DATA ENGINEERING</span>
+                        <span class="tag">ETL</span>
+                    </div>
+                    <a href="https://github.com/rahulraj0621/adventure_works_dataset-de_project" target="_blank" class="project-link">View on GitHub →</a>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-bg-number">08</div>
+                    <p class="project-category">BUSINESS INTELLIGENCE</p>
+                    <h3>Tableau Dashboard Suite</h3>
+                    <p>Created interactive Tableau dashboards for business analytics and KPI tracking, demonstrating proficiency across multiple BI tools beyond Power BI.</p>
+                    <div class="tags-container small-tags">
+                        <span class="tag">TABLEAU</span>
+                        <span class="tag">DATA VIZ</span>
+                        <span class="tag">KPI</span>
+                    </div>
+                    <a href="https://github.com/rahulraj0621/Tableau_Dashboard" target="_blank" class="project-link">View on GitHub →</a>
+                </div>
+            </div>
+
+            <div class="github-cta">
+                <a href="https://github.com/rahulraj0621" target="_blank" class="btn-outline dark-btn">View All 15+ Repos on GitHub →</a>
             </div>
         </div>
     </section>
 
     <!-- EDUCATION SECTION -->
-    <section id="education" class="section light-bg">
+    <section id="education" class="section light-bg reveal">
         <div class="container">
             <p class="subhead">ACADEMIC BACKGROUND</p>
-            <h2>Education &<br><em>Certifications</em></h2>
-            
+            <h2>Education &amp;<br><em>Certifications</em></h2>
+
             <div class="projects-grid">
                 <!-- B.Tech -->
                 <div class="education-card">
-                    <h3>B.Tech — Computer Science & Engineering</h3>
-                    <p>Birla Institute of Technology, Mesra <!--[cite: 1] --></p>
+                    <div class="edu-icon">🎓</div>
+                    <h3>B.Tech — Computer Science &amp; Engineering</h3>
+                    <p>Birla Institute of Technology, Mesra</p>
                     <p class="edu-date">NOV 2022 — JUL 2026</p>
                 </div>
 
                 <!-- 12th Grade -->
                 <div class="education-card">
+                    <div class="edu-icon">📚</div>
                     <h3>Class XII (CBSE)</h3>
                     <p>DAV Public School</p>
                     <p class="edu-date">2019 — 2021</p>
@@ -237,6 +373,7 @@
 
                 <!-- 10th Grade -->
                 <div class="education-card">
+                    <div class="edu-icon">📖</div>
                     <h3>Class X (CBSE)</h3>
                     <p>DAV Public School</p>
                     <p class="edu-date">2007 — 2019</p>
@@ -244,10 +381,11 @@
 
                 <!-- Certifications -->
                 <div class="education-card">
-                    <h3>Licenses & Certifications</h3>
-                    <ul class="job-bullets" style="margin-top: 15px; color: #1e1a18; padding-left: 15px;">
-                        <li>Python Complete Course & Flask Framework HTML Essentials (Udemy) <!--[cite: 1] --></li>
-                        <li>Volunteer, Drishti NGO BIT Mesra <!--[cite: 1] --></li>
+                    <div class="edu-icon">🏆</div>
+                    <h3>Licenses &amp; Certifications</h3>
+                    <ul class="job-bullets" style="margin-top: 15px; color: #555; padding-left: 15px;">
+                        <li>Python Complete Course &amp; Flask Framework HTML Essentials (Udemy)</li>
+                        <li>Volunteer, Drishti NGO — BIT Mesra</li>
                     </ul>
                 </div>
             </div>
@@ -255,25 +393,24 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="section dark-bg">
+    <section id="contact" class="section dark-bg reveal">
         <div class="container contact-grid">
             <div class="contact-text">
                 <p class="subhead">GET IN TOUCH</p>
                 <h2>Let's <em>Connect</em></h2>
                 <p>I'm currently open to full-time opportunities, freelance data projects, and interesting collaborations. My inbox is always open.</p>
-                
+
                 <ul class="contact-links">
-                    <li>✉️ <a href="mailto:rahulrajsingh2106@gmail.com">rahulrajsingh2106@gmail.com</a> <!--[cite: 1] --></li>
+                    <li>✉️ <a href="mailto:rahulrajsingh2106@gmail.com">rahulrajsingh2106@gmail.com</a></li>
                     <li>🔗 <a href="https://linkedin.com/in/rahulraj0621" target="_blank">linkedin.com/in/rahulraj0621</a></li>
-                    <li>💻 <a href="https://github.com/rahulraj0621" target="_blank">github.com/rahulraj0621</a> <!--[cite: 1] --></li>
-                    <li>📞 <a href="tel:+917739892106">+91-7739892106</a> <!--[cite: 1] --></li>
+                    <li>💻 <a href="https://github.com/rahulraj0621" target="_blank">github.com/rahulraj0621</a></li>
+                    <li>📞 <a href="tel:+917739892106">+91-7739892106</a></li>
                 </ul>
             </div>
-            
+
             <div class="contact-form">
                 <p class="form-title">Drop me a message</p>
-                <!-- REPLACE PASTE_YOUR_FORMSPREE_LINK_HERE WITH YOUR ACTUAL LINK -->
-                <form action="PASTE_YOUR_FORMSPREE_LINK_HERE" method="POST">
+                <form action="https://formspree.io/f/mzedddrq" method="POST">
                     <label>YOUR NAME</label>
                     <input type="text" name="name" placeholder="Priya Sharma" required>
                     <label>EMAIL ADDRESS</label>
@@ -285,5 +422,20 @@
             </div>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="logo" style="color:#fcf8f2;">Rahul <em>Raj</em></div>
+            <p>Designed &amp; Built with ❤️ by Rahul Raj · © 2026</p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/rahulraj0621" target="_blank">LinkedIn</a>
+                <a href="https://github.com/rahulraj0621" target="_blank">GitHub</a>
+                <a href="mailto:rahulrajsingh2106@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
