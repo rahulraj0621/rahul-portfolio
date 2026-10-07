@@ -491,6 +491,11 @@ nav.scrolled .hamburger span { background: var(--text-dark); }
 .edu-icon { font-size: 2rem; margin-bottom: 12px; }
 .edu-date { font-size: 0.75rem; letter-spacing: 1px; color: #888; margin-top: 15px; }
 
+.linkedin-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
 /* =========================================
    CONTACT SECTION
    ========================================= */
